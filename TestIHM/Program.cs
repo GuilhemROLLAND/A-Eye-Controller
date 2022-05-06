@@ -1,4 +1,4 @@
-namespace TestIHM
+namespace AEye
 {
     internal static class Program
     {
