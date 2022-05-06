@@ -1,8 +1,8 @@
 namespace TestIHM
 {
-    public partial class IHM : Form
+    public partial class Controller : Form
     {
-        public IHM()
+        public Controller()
         {
             InitializeComponent();
         }
