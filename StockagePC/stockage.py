@@ -5,5 +5,5 @@ import naming
 
 
 def placeImage(img, date=datetime.now(), mode="A"):
-    shutil.copyfile(img, arborescence.getPath(date=date) +
+    shutil.copyfile(img, arborescence.getPath(date=date, mode=mode) +
                     "/" + naming.getNameFile(mode=mode, date=date))
