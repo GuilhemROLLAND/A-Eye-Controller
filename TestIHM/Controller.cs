@@ -1,6 +1,8 @@
 using System.Net;
 using System.Net.NetworkInformation;
 using System.Text.Json;
+using System.Text.Json.Serialization;
+
 
 namespace AEye
 {
@@ -10,6 +12,8 @@ namespace AEye
         public Controller()
         {
             InitializeComponent();
+            mode_lb.SelectedIndex = 1;
+
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -77,7 +81,11 @@ namespace AEye
             }
 
             // Deserialize
-            ConfigFile? config = JsonSerializer.Deserialize<ConfigFile>(str);
+            var options = new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true
+            };
+            ConfigFile? config = JsonSerializer.Deserialize<ConfigFile>(str, options);
             if (config == null)
             {
                 MessageBox.Show("Invalid json structure in config.json file");
@@ -121,6 +129,11 @@ namespace AEye
                 Status.Text = "Wrong IP";
                 Status.BackColor = Color.Red;
             }
+        }
+
+        private void Controller_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -331,6 +331,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Controller";
             this.Text = "A-Eye Controller";
+            this.Load += new System.EventHandler(this.Controller_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.visionneuse)).EndInit();
