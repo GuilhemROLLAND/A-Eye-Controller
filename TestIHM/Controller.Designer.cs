@@ -32,15 +32,16 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.visionneuse = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.SelectPict_btn = new System.Windows.Forms.Button();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.SetConfig = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.mode_lb = new System.Windows.Forms.ListBox();
+            this.mode_cb = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.takePict_btn = new System.Windows.Forms.Button();
+            this.viewLog_btn = new System.Windows.Forms.Button();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.startStop_cb = new System.Windows.Forms.CheckBox();
             this.Status = new System.Windows.Forms.Label();
@@ -87,11 +88,10 @@
             this.visionneuse.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.visionneuse.TabIndex = 0;
             this.visionneuse.TabStop = false;
-            this.visionneuse.Click += new System.EventHandler(this.visionneuse_Click);
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Controls.Add(this.button1);
+            this.flowLayoutPanel1.Controls.Add(this.SelectPict_btn);
             this.flowLayoutPanel1.Controls.Add(this.checkBox2);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(270, 434);
@@ -100,18 +100,18 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(620, 42);
             this.flowLayoutPanel1.TabIndex = 1;
             // 
-            // button1
+            // SelectPict_btn
             // 
-            this.button1.AutoSize = true;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.Location = new System.Drawing.Point(491, 3);
-            this.button1.Name = "button1";
-            this.button1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.button1.Size = new System.Drawing.Size(126, 35);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Select Picture";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_2);
+            this.SelectPict_btn.AutoSize = true;
+            this.SelectPict_btn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.SelectPict_btn.Location = new System.Drawing.Point(491, 3);
+            this.SelectPict_btn.Name = "SelectPict_btn";
+            this.SelectPict_btn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.SelectPict_btn.Size = new System.Drawing.Size(126, 35);
+            this.SelectPict_btn.TabIndex = 0;
+            this.SelectPict_btn.Text = "Select Picture";
+            this.SelectPict_btn.UseVisualStyleBackColor = true;
+            this.SelectPict_btn.Click += new System.EventHandler(this.SelectPict_btn_Click);
             // 
             // checkBox2
             // 
@@ -166,7 +166,7 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.66667F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.33334F));
             this.tableLayoutPanel3.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.mode_lb, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.mode_cb, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -185,23 +185,21 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Mode";
             // 
-            // mode_lb
+            // mode_cb
             // 
-            this.mode_lb.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.mode_lb.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.mode_lb.FormattingEnabled = true;
-            this.mode_lb.ItemHeight = 25;
-            this.mode_lb.Items.AddRange(new object[] {
+            this.mode_cb.AutoCompleteCustomSource.AddRange(new string[] {
             "Auto (with AI)",
             "Manual capture",
             "Video flux"});
-            this.mode_lb.Location = new System.Drawing.Point(71, 3);
-            this.mode_lb.Name = "mode_lb";
-            this.mode_lb.ScrollAlwaysVisible = true;
-            this.mode_lb.Size = new System.Drawing.Size(181, 29);
-            this.mode_lb.TabIndex = 1;
+            this.mode_cb.FormattingEnabled = true;
+            this.mode_cb.Items.AddRange(new object[] {
+            "Auto (with AI)",
+            "Manual capture",
+            "Video flux"});
+            this.mode_cb.Location = new System.Drawing.Point(71, 3);
+            this.mode_cb.Name = "mode_cb";
+            this.mode_cb.Size = new System.Drawing.Size(181, 33);
+            this.mode_cb.TabIndex = 6;
             // 
             // tableLayoutPanel5
             // 
@@ -213,6 +211,7 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.Controls.Add(this.takePict_btn, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.viewLog_btn, 0, 0);
             this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 87);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
@@ -232,6 +231,19 @@
             this.takePict_btn.Text = "TakePicture";
             this.takePict_btn.UseVisualStyleBackColor = true;
             this.takePict_btn.Click += new System.EventHandler(this.takePict_btn_Click);
+            // 
+            // viewLog_btn
+            // 
+            this.viewLog_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.viewLog_btn.Location = new System.Drawing.Point(3, 3);
+            this.viewLog_btn.Name = "viewLog_btn";
+            this.viewLog_btn.Size = new System.Drawing.Size(121, 30);
+            this.viewLog_btn.TabIndex = 6;
+            this.viewLog_btn.Text = "View Log";
+            this.viewLog_btn.UseVisualStyleBackColor = true;
+            this.viewLog_btn.Click += new System.EventHandler(this.viewLog_btn_Click);
             // 
             // tableLayoutPanel6
             // 
@@ -331,7 +343,6 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Controller";
             this.Text = "A-Eye Controller";
-            this.Load += new System.EventHandler(this.Controller_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.visionneuse)).EndInit();
@@ -355,11 +366,10 @@
         private TableLayoutPanel tableLayoutPanel1;
         private PictureBox visionneuse;
         private FlowLayoutPanel flowLayoutPanel1;
-        private Button button1;
+        private Button SelectPict_btn;
         private TableLayoutPanel tableLayoutPanel2;
         private TableLayoutPanel tableLayoutPanel3;
         private Label label1;
-        private ListBox mode_lb;
         private CheckBox startStop_cb;
         private TableLayoutPanel tableLayoutPanel4;
         private TextBox ip_tb;
@@ -371,5 +381,7 @@
         private Button SetConfig;
         private TableLayoutPanel tableLayoutPanel6;
         private Label Status;
+        private ComboBox mode_cb;
+        private Button viewLog_btn;
     }
 }

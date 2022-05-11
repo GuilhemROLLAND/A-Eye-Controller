@@ -20,42 +20,41 @@
 
     public class TakePicture
     {
+        public string Valid { get; set; }
 
-
-        public bool? Valid { get; set; }
-
-
-        public TakePicture(bool? v)
+        public TakePicture(string v)
         {
             Valid = v;
         }
 
         public TakePicture()
         {
+            Valid = false.ToString();
         }
     }
 
     public class Weights
     {
 
-        public bool? Valid { get; set; }
-        public Weights(bool? v)
+        public string Valid { get; set; }
+        public Weights(string v)
         {
             Valid = v;
         }
 
         public Weights()
         {
+            this.Valid = false.ToString();
         }
     }
 
     public class Config
     {
 
-        public bool? StartStop { get; set; }
-        public int? ModeSelector { get; set; }
+        public string StartStop { get; set; }
+        public string ModeSelector { get; set; }
 
-        public Config(bool? @checked, int? selectedIndex)
+        public Config(string @checked, string selectedIndex)
         {
             this.StartStop = @checked;
             this.ModeSelector = selectedIndex;
@@ -63,6 +62,8 @@
 
         public Config()
         {
+            this.StartStop = false.ToString();
+            this.ModeSelector = false.ToString();
         }
     }
 }

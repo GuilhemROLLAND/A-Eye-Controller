@@ -8,42 +8,32 @@ namespace AEye
 {
     public partial class Controller : Form
     {
-        public IPAddress? Ip;
+        
         public Controller()
         {
             InitializeComponent();
-            mode_lb.SelectedIndex = 1;
-
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click_2(object sender, EventArgs e)
-        {
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                visionneuse.Load(openFileDialog1.FileName);
-            }
+            mode_cb.SelectedIndex = 1;
         }
 
         private void SetConfig_Click(object sender, EventArgs e)
         {
             // Get the current config
-            ConfigFile config = new ConfigFile(
-                new Config(startStop_cb.Checked, mode_lb.SelectedIndex), 
-                new Weights(false), 
-                new TakePicture(false));
+            var config = new ConfigFile(
+                new Config(startStop_cb.Checked.ToString(), mode_cb.SelectedIndex.ToString()), 
+                new Weights(false.ToString()), 
+                new TakePicture(false.ToString()));
 
             // Serialize in Json
             string jsonString = JsonSerializer.Serialize(config);
+
             // Write in file
             File.WriteAllText("config.json", jsonString);
 
+            // Set the trigger
+            Program.trigger.EncodeTC = true;
+
             // Activate button
-            if (mode_lb.SelectedIndex == 1)
+            if (mode_cb.SelectedIndex == 1)
             {
                 takePict_btn.Enabled = true;
             }
@@ -51,14 +41,7 @@ namespace AEye
             {
                 takePict_btn.Enabled = false;
             }
-        }
 
-        private void visionneuse_Click(object sender, EventArgs e)
-        {
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                visionneuse.Load(openFileDialog1.FileName);
-            }
         }
 
         private void takePict_btn_Click(object sender, EventArgs e)
@@ -91,22 +74,29 @@ namespace AEye
                 MessageBox.Show("Invalid json structure in config.json file");
                 return ;
             }
+
+            // Modify the JSON
             if (config.TakePicture == null)
             {
-                config.TakePicture = new TakePicture(true);
+                config.TakePicture = new TakePicture(true.ToString());
             }
             else
             {
-                config.TakePicture.Valid = true;
+                config.TakePicture.Valid = true.ToString();
             }
+
+            // Save in JSON
             File.WriteAllText("config.json", JsonSerializer.Serialize<ConfigFile>(config));
+
+            // Set the trigger
+            Program.trigger.EncodeTC = true;
         }
 
         private void ip_btn_Click(object sender, EventArgs e)
         {
             try
             {
-                Ip = IPAddress.Parse(ip_tb.Text);
+                Program.Ip = IPAddress.Parse(ip_tb.Text);
             }
             catch (Exception ex)
             {
@@ -115,25 +105,33 @@ namespace AEye
             }
 
             Ping pingSender = new Ping();
-            PingReply reply = pingSender.Send(Ip);
+            PingReply reply = pingSender.Send(Program.Ip);
             if (reply.Status == IPStatus.Success)
             {
-                MessageBox.Show("New IP set : " + Ip);
+                MessageBox.Show("New IP set : " + Program.Ip);
                 Status.Text = "Connected";
                 Status.BackColor = Color.YellowGreen;
             } 
             else
             {
-                MessageBox.Show("Wrong IP set : " + Ip);
-                Ip = null;
+                MessageBox.Show("Wrong IP set : " + Program.Ip);
+                Program.Ip = null;
                 Status.Text = "Wrong IP";
                 Status.BackColor = Color.Red;
             }
         }
 
-        private void Controller_Load(object sender, EventArgs e)
+        private void SelectPict_btn_Click(object sender, EventArgs e)
         {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                visionneuse.Load(openFileDialog1.FileName);
+            }
+        }
 
+        private void viewLog_btn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(Program.log);
         }
     }
 }
