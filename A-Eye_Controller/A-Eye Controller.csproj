@@ -9,6 +9,123 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="CommunicationModule\.vscode\tasks.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="CommunicationModule\.git\COMMIT_EDITMSG" />
+    <None Include="CommunicationModule\.git\config" />
+    <None Include="CommunicationModule\.git\description" />
+    <None Include="CommunicationModule\.git\FETCH_HEAD" />
+    <None Include="CommunicationModule\.git\HEAD" />
+    <None Include="CommunicationModule\.git\hooks\applypatch-msg.sample" />
+    <None Include="CommunicationModule\.git\hooks\commit-msg.sample" />
+    <None Include="CommunicationModule\.git\hooks\fsmonitor-watchman.sample" />
+    <None Include="CommunicationModule\.git\hooks\post-update.sample" />
+    <None Include="CommunicationModule\.git\hooks\pre-applypatch.sample" />
+    <None Include="CommunicationModule\.git\hooks\pre-commit.sample" />
+    <None Include="CommunicationModule\.git\hooks\pre-merge-commit.sample" />
+    <None Include="CommunicationModule\.git\hooks\pre-push.sample" />
+    <None Include="CommunicationModule\.git\hooks\pre-rebase.sample" />
+    <None Include="CommunicationModule\.git\hooks\pre-receive.sample" />
+    <None Include="CommunicationModule\.git\hooks\prepare-commit-msg.sample" />
+    <None Include="CommunicationModule\.git\hooks\push-to-checkout.sample" />
+    <None Include="CommunicationModule\.git\hooks\update.sample" />
+    <None Include="CommunicationModule\.git\index" />
+    <None Include="CommunicationModule\.git\info\exclude" />
+    <None Include="CommunicationModule\.git\logs\HEAD" />
+    <None Include="CommunicationModule\.git\logs\refs\heads\DecodageTM" />
+    <None Include="CommunicationModule\.git\logs\refs\heads\main" />
+    <None Include="CommunicationModule\.git\logs\refs\remotes\origin\DecodageTM" />
+    <None Include="CommunicationModule\.git\logs\refs\remotes\origin\HEAD" />
+    <None Include="CommunicationModule\.git\logs\refs\remotes\origin\main" />
+    <None Include="CommunicationModule\.git\objects\09\1da217b7ff53f3edee3f178749d18066084d6e" />
+    <None Include="CommunicationModule\.git\objects\0c\b137740f6841e1f5ab7adcb5e224771f654771" />
+    <None Include="CommunicationModule\.git\objects\13\6d521c76ecf2dd7d04b62450f811f4d3ac7d32" />
+    <None Include="CommunicationModule\.git\objects\14\7217623c44d30b799011b45ab7af7cc22ae008" />
+    <None Include="CommunicationModule\.git\objects\15\62ddd243d5dc5463714b8bc59ad5284c956769" />
+    <None Include="CommunicationModule\.git\objects\17\f3387b808c58b43b167d024b4e99964b77856d" />
+    <None Include="CommunicationModule\.git\objects\18\c374c40117718e2f0cab45a68ec50f58471583" />
+    <None Include="CommunicationModule\.git\objects\1d\566f96f9a08e29bd826170577a5c36ddf5d98e" />
+    <None Include="CommunicationModule\.git\objects\1d\7ed40806e437e8457b8beead7baceb3001608a" />
+    <None Include="CommunicationModule\.git\objects\1e\8ffecaedd35c7190c17e9e2cb6cb8e1c1b4c4f" />
+    <None Include="CommunicationModule\.git\objects\1f\61a83e9da9eef73218198b979e122fca4dc121" />
+    <None Include="CommunicationModule\.git\objects\21\05aa91a05bdabedbf29df4bb2f649755bb52f5" />
+    <None Include="CommunicationModule\.git\objects\21\d4955871210f6057b66000979ad31c39105f7e" />
+    <None Include="CommunicationModule\.git\objects\22\df3d9086d39b00c09ce2390f93ec371031d4bb" />
+    <None Include="CommunicationModule\.git\objects\24\2c28263adf2765713dd2ac5d8553fb4e7ed05f" />
+    <None Include="CommunicationModule\.git\objects\26\5b67892fcdafca2fe047e0d2e6eb9241a26055" />
+    <None Include="CommunicationModule\.git\objects\2d\fdf5b2ddef04decd4ee60f25a77a5f51b6d30e" />
+    <None Include="CommunicationModule\.git\objects\37\3ac440f6dec37c0e299971fff066987a3a427e" />
+    <None Include="CommunicationModule\.git\objects\37\d8071db9527fc48eff29cd4105483b7f269496" />
+    <None Include="CommunicationModule\.git\objects\3b\c30157e1e8f9d793a79e6a23fb7ca48c7df86b" />
+    <None Include="CommunicationModule\.git\objects\3d\21af9a134a9e390436d784be22ac77ada5c5e6" />
+    <None Include="CommunicationModule\.git\objects\3e\61d5b95ffa868dc64a394da25f59e28fdaaabe" />
+    <None Include="CommunicationModule\.git\objects\45\7290046571d0f3fda813b274f24d06cdc0a414" />
+    <None Include="CommunicationModule\.git\objects\47\f080470cffb226d62848d387b9b6b9b4cf7d1b" />
+    <None Include="CommunicationModule\.git\objects\4b\f01615edd3523a4ad5feb45ed9aeeb3d71b4cc" />
+    <None Include="CommunicationModule\.git\objects\4d\f86493b80296f8783b9da4d81853359315f01b" />
+    <None Include="CommunicationModule\.git\objects\51\e971e32321fe2786f65f5cb13c2b5df6cfaa28" />
+    <None Include="CommunicationModule\.git\objects\53\146a397e8b7a489e17e6a1505f42cfbe4b8e00" />
+    <None Include="CommunicationModule\.git\objects\5b\c59034b39cf84589106f06426615c7c409d69f" />
+    <None Include="CommunicationModule\.git\objects\5c\377358a4bfaf7e95a05e8456c26e5571acefde" />
+    <None Include="CommunicationModule\.git\objects\61\84f9855d308a8ae775fc37a56318dfd374d350" />
+    <None Include="CommunicationModule\.git\objects\62\fa61a04dfd65d40e0e3873a46b9cdeb0ebdf95" />
+    <None Include="CommunicationModule\.git\objects\64\0232e78c43456335e714513fc1399b3fd1f365" />
+    <None Include="CommunicationModule\.git\objects\67\243f3b6dc1a26c59c7f7b2bddd0d89709f97d5" />
+    <None Include="CommunicationModule\.git\objects\6b\ad0980997a92ada88542959863660a02029c15" />
+    <None Include="CommunicationModule\.git\objects\75\f9c98e4f127627f0d66b34b5a62dbf1303002a" />
+    <None Include="CommunicationModule\.git\objects\7e\84bb5323661d92e864b39bc1a2224a8aaaa1d1" />
+    <None Include="CommunicationModule\.git\objects\89\5f59194c6395d4fedf93c2903bee699e365522" />
+    <None Include="CommunicationModule\.git\objects\89\9943623065240b2a4fee540b8815059af7777e" />
+    <None Include="CommunicationModule\.git\objects\8c\6ec11d0b236f6378c434d1aa67ae22b635f1cd" />
+    <None Include="CommunicationModule\.git\objects\95\8274d4ade9428703637071f873b0919f4257ea" />
+    <None Include="CommunicationModule\.git\objects\96\bca74c4db8f214f3dbeb669953f8cc9be76db1" />
+    <None Include="CommunicationModule\.git\objects\97\d537aa0421a29671e946ce4672d527b237b121" />
+    <None Include="CommunicationModule\.git\objects\99\1290cbb20fa52902a70d3ebcb47fa77baa6a36" />
+    <None Include="CommunicationModule\.git\objects\9c\28577b235d84447b719a3812c279e19f29b932" />
+    <None Include="CommunicationModule\.git\objects\9f\0fedc784c2507b5a09a575952794839ce4b267" />
+    <None Include="CommunicationModule\.git\objects\9f\8bdb0dbdf6604d37f7236be38b7c6ee7a9228a" />
+    <None Include="CommunicationModule\.git\objects\a9\d1ec4d1f29b9938d69426fa09411213e591c94" />
+    <None Include="CommunicationModule\.git\objects\b5\3be63fb0ffc9c8b009d342d252837271e3655c" />
+    <None Include="CommunicationModule\.git\objects\b7\d345d6c753bfd4a86a2fa753a233ad2198b8e4" />
+    <None Include="CommunicationModule\.git\objects\b8\e871ec1f545a9800808ef90a0de80d2940fe81" />
+    <None Include="CommunicationModule\.git\objects\be\84c21adde59faea08122e367e65bbdf9abc327" />
+    <None Include="CommunicationModule\.git\objects\c2\8fb50ae2092286e5dcdbdaabaac7595228f4db" />
+    <None Include="CommunicationModule\.git\objects\c8\22da10c34bc1dc1635c2ead7131a03bcabe13a" />
+    <None Include="CommunicationModule\.git\objects\cb\2d0e82726603f15cffbae7eea8c0742f94f3ad" />
+    <None Include="CommunicationModule\.git\objects\cd\d9820a214745190898b1fdd548405af816d5dc" />
+    <None Include="CommunicationModule\.git\objects\d1\5b390b23cb176f97d431e50ec0b81c268a755c" />
+    <None Include="CommunicationModule\.git\objects\d2\5c7659af3cb356fe82b7c04cca7574a510d9fd" />
+    <None Include="CommunicationModule\.git\objects\d2\e1cbd742eef62007d67bfc777bdafbbe3e1a96" />
+    <None Include="CommunicationModule\.git\objects\d7\652a4e5f44d9ebba92488a29972167a663d409" />
+    <None Include="CommunicationModule\.git\objects\d7\ce2332591f312cdda0240d082a33f8fd39a9ca" />
+    <None Include="CommunicationModule\.git\objects\d8\71da25fbe2d572c57ac4f1e02609b00c987ed2" />
+    <None Include="CommunicationModule\.git\objects\db\9bad308fa62ec9d8d1309c2a6de55ae8f4ce61" />
+    <None Include="CommunicationModule\.git\objects\db\b262f35a5dc58030b1a39ae3dc81277d3cb780" />
+    <None Include="CommunicationModule\.git\objects\e1\de0bab51f17ba72ad200b31d74dfdf31551688" />
+    <None Include="CommunicationModule\.git\objects\e5\52444357ed3dda1470b84f2d6001467584bcaf" />
+    <None Include="CommunicationModule\.git\objects\e6\f55b60ac5832a8dd2afd84365fc707e58b75ff" />
+    <None Include="CommunicationModule\.git\objects\e7\9eee1036e5d21fb09ecff2c9dadb299032185d" />
+    <None Include="CommunicationModule\.git\objects\ea\531418fc2cf602c7ef02a2fde7fd2c5c83cb72" />
+    <None Include="CommunicationModule\.git\objects\ed\0a57b2a61068a6d49b49fd7ab4e01d449eeecc" />
+    <None Include="CommunicationModule\.git\objects\ef\d75e134ea70a4ac14dccc9d43ccff47dafb162" />
+    <None Include="CommunicationModule\.git\objects\f0\23300c8a8a7eb8f3d28a3abbad5a5424030aea" />
+    <None Include="CommunicationModule\.git\objects\f1\9600272c30d537b421816cf314581f5450e982" />
+    <None Include="CommunicationModule\.git\objects\fc\a04838bc44b0ac485644e670ba072753711173" />
+    <None Include="CommunicationModule\.git\objects\ff\d9c1d50cc6bbd4629b6c29539bf56257a5a115" />
+    <None Include="CommunicationModule\.git\objects\pack\pack-e6001cf29656936577a6d98787f2883bc22dbe9c.idx" />
+    <None Include="CommunicationModule\.git\objects\pack\pack-e6001cf29656936577a6d98787f2883bc22dbe9c.pack" />
+    <None Include="CommunicationModule\.git\ORIG_HEAD" />
+    <None Include="CommunicationModule\.git\packed-refs" />
+    <None Include="CommunicationModule\.git\refs\heads\DecodageTM" />
+    <None Include="CommunicationModule\.git\refs\heads\main" />
+    <None Include="CommunicationModule\.git\refs\remotes\origin\DecodageTM" />
+    <None Include="CommunicationModule\.git\refs\remotes\origin\HEAD" />
+    <None Include="CommunicationModule\.git\refs\remotes\origin\main" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -24,6 +141,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="CommunicationModule\client.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="CommunicationModule\decodageTM.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="CommunicationModule\encodageTC.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="last_config.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -40,6 +166,11 @@
     <None Update="StockagePC\stockage.py">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="CommunicationModule\.git\objects\info\" />
+    <Folder Include="CommunicationModule\.git\refs\tags\" />
   </ItemGroup>
 
 </Project>
