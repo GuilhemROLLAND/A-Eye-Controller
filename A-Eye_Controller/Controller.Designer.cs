@@ -318,7 +318,7 @@
             this.ip_tb.Name = "ip_tb";
             this.ip_tb.Size = new System.Drawing.Size(176, 31);
             this.ip_tb.TabIndex = 1;
-            this.ip_tb.Text = "192.168.XXX.XXX";
+            this.ip_tb.Text = "192.168.1.21";
             // 
             // ip_btn
             // 

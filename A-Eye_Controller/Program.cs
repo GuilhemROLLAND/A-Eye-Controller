@@ -28,6 +28,8 @@ namespace AEye
         static void RunThread()
         {
             SubProcess subProcess = new SubProcess();
+            Thread clientInPython = new Thread(subProcess.ClientPythonLaunch);
+            clientInPython.Start();
             while (true)
             {
                 if (trigger.EncodeTC)

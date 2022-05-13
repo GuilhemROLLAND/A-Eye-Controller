@@ -11,12 +11,12 @@ namespace AEye
     {
         public void RunEncod()
         {
-            if (Program.Ip == null)
-            {
-                MessageBox.Show("Set IP first");
-                return;
-            }
-            run_cmd(".\\encodageTC.py", "-i " + Program.Ip.ToString() + " -p 64000");
+            //if (Program.Ip == null)
+            //{
+            //    MessageBox.Show("Set IP first");
+            //    return;
+            //}
+            //run_cmd(".\\CommunicationModule\\client.py", "-i " + Program.Ip.ToString() + " -p 64000");
         }
         public void RunDecod()
         {
@@ -30,14 +30,30 @@ namespace AEye
             start.Arguments = string.Format("{0} {1}", cmd, args);
             start.UseShellExecute = false;
             start.RedirectStandardOutput = true;
-            using (Process process = Process.Start(start))
+            Process? process = Process.Start(start);
+            if (process == null)
+            {
+                Program.log += "[ERROR][RUN_CMD] Cannot start process\n";
+                return;
+            }
+            else
             {
                 using (StreamReader reader = process.StandardOutput)
                 {
                     string result = reader.ReadToEnd();
-                    Program.log += result;
+                    Program.log += "[PYTHON][" + cmd + "] " + result + "\n";
                 }
             }
+        }
+
+        internal void ClientPythonLaunch(object? obj)
+        {
+            if (Program.Ip == null)
+            {
+                MessageBox.Show("Set IP first");
+                return;
+            }
+            run_cmd(".\\CommunicationModule\\client.py", "-i " + Program.Ip.ToString() + " -p 64000");
         }
     }
 }
