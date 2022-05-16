@@ -33,7 +33,7 @@
             this.visionneuse = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.SelectPict_btn = new System.Windows.Forms.Button();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.auto_cb = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.SetConfig = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -92,7 +92,7 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Controls.Add(this.SelectPict_btn);
-            this.flowLayoutPanel1.Controls.Add(this.checkBox2);
+            this.flowLayoutPanel1.Controls.Add(this.auto_cb);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(270, 434);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -113,16 +113,17 @@
             this.SelectPict_btn.UseVisualStyleBackColor = true;
             this.SelectPict_btn.Click += new System.EventHandler(this.SelectPict_btn_Click);
             // 
-            // checkBox2
+            // auto_cb
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox2.Location = new System.Drawing.Point(373, 3);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(112, 35);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "Autoload";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.auto_cb.AutoSize = true;
+            this.auto_cb.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.auto_cb.Location = new System.Drawing.Point(373, 3);
+            this.auto_cb.Name = "auto_cb";
+            this.auto_cb.Size = new System.Drawing.Size(112, 35);
+            this.auto_cb.TabIndex = 1;
+            this.auto_cb.Text = "Autoload";
+            this.auto_cb.UseVisualStyleBackColor = true;
+            this.auto_cb.CheckedChanged += new System.EventHandler(this.auto_cb_CheckedChanged);
             // 
             // tableLayoutPanel2
             // 
@@ -377,7 +378,7 @@
         private Button ip_btn;
         private TableLayoutPanel tableLayoutPanel5;
         private Button takePict_btn;
-        private CheckBox checkBox2;
+        private CheckBox auto_cb;
         private Button SetConfig;
         private TableLayoutPanel tableLayoutPanel6;
         private Label Status;

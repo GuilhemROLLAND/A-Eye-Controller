@@ -9,6 +9,8 @@ namespace AEye
 
         public static IPAddress? Ip;
 
+        public static Controller controller = new Controller();
+
         public static string log = "";
         /// <summary>
         ///  The main entry point for the application.
@@ -21,15 +23,18 @@ namespace AEye
             ApplicationConfiguration.Initialize();
             Thread run_thr = new Thread(RunThread);
             run_thr.Start();
-            Application.Run(new Controller());
+            Application.Run(controller);
             Environment.Exit(0);
         }
 
         static void RunThread()
         {
             SubProcess subProcess = new SubProcess();
-            Thread clientInPython = new Thread(subProcess.ClientPythonLaunch);
-            clientInPython.Start();
+            Thread pipe = new Thread(subProcess.PipeServer_Run);
+            pipe.Start();
+            Thread clientTCP = new Thread(subProcess.ClientPythonLaunch);
+            clientTCP.Start();
+
             while (true)
             {
                 if (trigger.EncodeTC)

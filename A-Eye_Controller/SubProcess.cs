@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO.Pipes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,7 +34,7 @@ namespace AEye
             Process? process = Process.Start(start);
             if (process == null)
             {
-                Program.log += "[ERROR][RUN_CMD] Cannot start process\n";
+                Program.log += "[ERROR][RUN_CMD] Cannot start " + cmd + " process\n";
                 return;
             }
             else
@@ -55,6 +56,26 @@ namespace AEye
             }
             Program.log += "[INFO] Run Python Client\n";
             run_cmd(".\\CommunicationModule\\client.py", "-i " + Program.Ip.ToString() + " -p 64000");
+        }
+
+        public void PipeServer_Run()
+        {
+            NamedPipeServerStream serverStream = new NamedPipeServerStream("CSServer", PipeDirection.In);
+            string temp;
+            while (true)
+            {
+                serverStream.WaitForConnection();
+                StreamReader reader = new StreamReader(serverStream);
+                while ((temp = reader.ReadLine()) != null)
+                {
+                    Program.log += "[INFO][From Python pipe] " + temp + "\n";
+                    if (temp.Contains("Image"))
+                    {
+                        Program.controller.refresh_img();
+                    }
+                }
+                serverStream.Disconnect();
+            }
         }
     }
 }

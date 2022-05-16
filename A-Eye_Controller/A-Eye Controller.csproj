@@ -150,6 +150,9 @@
     <None Update="CommunicationModule\encodageTC.py">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="CommunicationModule\pipeClient.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="last_config.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

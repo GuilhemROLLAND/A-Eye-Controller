@@ -8,7 +8,7 @@ namespace AEye
 {
     public partial class Controller : Form
     {
-        
+
         public Controller()
         {
             InitializeComponent();
@@ -19,8 +19,8 @@ namespace AEye
         {
             // Get the current config
             var config = new ConfigFile(
-                new Config(startStop_cb.Checked.ToString(), mode_cb.SelectedIndex.ToString()), 
-                new Weights(false.ToString()), 
+                new Config(startStop_cb.Checked.ToString(), mode_cb.SelectedIndex.ToString()),
+                new Weights(false.ToString()),
                 new TakePicture(false.ToString()));
 
             // Serialize in Json
@@ -60,7 +60,7 @@ namespace AEye
             if (str == null)
             {
                 MessageBox.Show("Invalid content in config.json file");
-                return ;
+                return;
             }
 
             // Deserialize
@@ -72,7 +72,7 @@ namespace AEye
             if (config == null)
             {
                 MessageBox.Show("Invalid json structure in config.json file");
-                return ;
+                return;
             }
 
             // Modify the JSON
@@ -111,7 +111,7 @@ namespace AEye
                 MessageBox.Show("New IP set : " + Program.Ip);
                 Status.Text = "Connected";
                 Status.BackColor = Color.YellowGreen;
-            } 
+            }
             else
             {
                 MessageBox.Show("Wrong IP set : " + Program.Ip);
@@ -132,6 +132,17 @@ namespace AEye
         private void viewLog_btn_Click(object sender, EventArgs e)
         {
             MessageBox.Show(Program.log);
+        }
+
+        private void auto_cb_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        public void refresh_img()
+        {
+            if(auto_cb.Checked)
+                visionneuse.Load("temp.bmp");
         }
     }
 }
