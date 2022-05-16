@@ -34,22 +34,9 @@ namespace AEye
             pipe.Start();
             Thread clientTCP = new Thread(subProcess.ClientPythonLaunch);
             clientTCP.Start();
-
             while (true)
             {
-                if (trigger.EncodeTC)
-                {
-                    trigger.EncodeTC = false;
-                    Thread encod_thr = new Thread(subProcess.RunEncod);
-                    encod_thr.Start();
-                }
-                if (trigger.DecodeTC)
-                {
-                    trigger.DecodeTC = false;
-                    Thread decod_thr = new Thread(subProcess.RunDecod);
-                    decod_thr.Start();
-                }
-                Thread.Sleep(10);
+                Thread.Sleep(1000);
             }
         }
     }
