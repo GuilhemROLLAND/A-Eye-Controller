@@ -166,6 +166,9 @@
     <None Update="StockagePC\naming.py">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="StockagePC\run_stockage.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="StockagePC\stockage.py">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
