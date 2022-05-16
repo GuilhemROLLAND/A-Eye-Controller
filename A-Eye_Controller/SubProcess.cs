@@ -54,6 +54,7 @@ namespace AEye
                 //MessageBox.Show("Set IP first");
                 //return;
             }
+            Program.log += "[INFO] Run Python Client\n";
             run_cmd(".\\CommunicationModule\\client.py", "-i " + Program.Ip.ToString() + " -p 64000");
         }
 
