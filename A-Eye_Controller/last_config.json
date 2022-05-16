@@ -1,10 +1,10 @@
 {
     "Config": {
-        "StartStop": "true",
-        "ModeSelector": "2"
+        "StartStop": "false",
+        "ModeSelector": "0"
     },
     "Weights": {
-        "Valid": "true"
+        "Valid": "false"
     },
     "TakePicture": {
         "Valid": "false"

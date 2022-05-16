@@ -9,6 +9,8 @@ namespace AEye
 
         public static IPAddress? Ip;
 
+        public static Controller controller = new Controller();
+
         public static string log = "";
         /// <summary>
         ///  The main entry point for the application.
@@ -21,7 +23,7 @@ namespace AEye
             ApplicationConfiguration.Initialize();
             Thread run_thr = new Thread(RunThread);
             run_thr.Start();
-            Application.Run(new Controller());
+            Application.Run(controller);
             Environment.Exit(0);
         }
 

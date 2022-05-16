@@ -34,7 +34,7 @@ namespace AEye
             Process? process = Process.Start(start);
             if (process == null)
             {
-                Program.log += "[ERROR][RUN_CMD] Cannot start "+cmd+" process\n";
+                Program.log += "[ERROR][RUN_CMD] Cannot start " + cmd + " process\n";
                 return;
             }
             else
@@ -68,6 +68,10 @@ namespace AEye
                 while ((temp = reader.ReadLine()) != null)
                 {
                     Program.log += "[INFO][From Python pipe] " + temp + "\n";
+                    if (temp.Contains("Image"))
+                    {
+                        Program.controller.refresh_img();
+                    }
                 }
                 serverStream.Disconnect();
             }
