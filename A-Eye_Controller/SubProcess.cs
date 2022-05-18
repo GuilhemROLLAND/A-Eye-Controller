@@ -72,7 +72,14 @@ namespace AEye
                     if (line.Contains("Image"))
                     {
                         Program.controller.refresh_img();
-                        run_cmd("StockagePC/run_stockage.py", "-f temp.bmp");
+                        if (line.Contains("Manual"))
+                        {
+                            run_cmd("StockagePC/run_stockage.py", "-f temp.bmp -m M");
+                        }
+                        else
+                        {
+                            run_cmd("StockagePC/run_stockage.py", "-f temp.bmp");
+                        }
                     }
                 }
                 serverStream.Disconnect();

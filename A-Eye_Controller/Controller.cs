@@ -15,6 +15,11 @@ namespace AEye
             mode_cb.SelectedIndex = 1;
         }
 
+        public int get_mode()
+        {
+            return mode_cb.SelectedIndex;
+        }
+
         private void SetConfig_Click(object sender, EventArgs e)
         {
             // Get the current config
