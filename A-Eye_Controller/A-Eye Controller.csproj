@@ -141,6 +141,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="A-Eye_CommunicationModule\client.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="A-Eye_CommunicationModule\decodageTM.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="A-Eye_CommunicationModule\encodageTC.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="A-Eye_CommunicationModule\pipeClient.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="CommunicationModule\client.py">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

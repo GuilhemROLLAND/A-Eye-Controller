@@ -55,7 +55,7 @@ namespace AEye
                 //return;
             }
             Program.log += "[INFO] Run Python Client\n";
-            run_cmd(".\\CommunicationModule\\client.py", "-i " + Program.Ip.ToString() + " -p 64000");
+            run_cmd(".\\A-Eye_CommunicationModule\\client.py", "-i " + Program.Ip.ToString() + " -p 64000");
         }
 
         public void PipeServer_Run()
