@@ -30,10 +30,10 @@ namespace AEye
         static void RunThread()
         {
             SubProcess subProcess = new SubProcess();
-            Thread pipe = new Thread(subProcess.PipeServer_Run);
-            pipe.Start();
-            Thread clientTCP = new Thread(subProcess.ClientPythonLaunch);
-            clientTCP.Start();
+            Thread pipe_thr = new Thread(subProcess.PipeServer_Run);
+            pipe_thr.Start();
+            Thread clientTCP_thr = new Thread(subProcess.ClientPythonLaunch);
+            clientTCP_thr.Start();
             while (true)
             {
                 Thread.Sleep(1000);
