@@ -1,0 +1,222 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/Users/rolland/Documents/GIT/A-Eye_Controller/A-Eye_Controller",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AEye.Config.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AEye.Config.html",
+          "hash": "J48kfveJo4++qm3OHYRHFbgk8aIraXAKOFHGiAvbErk="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AEye.ConfigFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AEye.ConfigFile.html",
+          "hash": "g48JVyYfs9Euj0PN5WU1470uhgQNldKtQ0amqAHzdE4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AEye.Controller.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AEye.Controller.html",
+          "hash": "1Cek4Qt+PGVDZD1gbERh0av9qy6GMQXudI5wk0aaBj8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AEye.SubProcess.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AEye.SubProcess.html",
+          "hash": "buLDgRwmnekPD1sMp3fPOK+jDYNdDUv0KKGigY0XozI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AEye.TakePicture.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AEye.TakePicture.html",
+          "hash": "sEGrB2CVcwx1xEXC0S76gfu0DH8Sfs3teQRT9Ck/+M8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AEye.Trigger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AEye.Trigger.html",
+          "hash": "KUvKL8Rq3VOo3WNDtlFUeaw146lSO23pXWq9WLRfEnA="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AEye.Weights.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AEye.Weights.html",
+          "hash": "22wpmLKJKzxApE3kQg4JwN9exs53SZ2EBzbo5HtY9Ww="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AEye.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AEye.html",
+          "hash": "q0atVDEKcDE19KOilmNsnIptCVeOb4dNBR5WRpgRUX8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "uS56Xra9q2recmptWAy9fBMQcr9pG54Byjrj4JLFP9w="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "2ksFMDIRpLNY1CUOrTCo0MMP8Nbv1al/Q1TXgvCc5uo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "m2jvorNS6pHQlittJijrIJduvAR1YGHsKHkhK3XeimY="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "BlPxk5mtl2kgfcZUgkEguqiSAR/EUyUTT4EdebwkQvs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "tx+K4Bs9ohuVegNIo5TNRG2RFEHlMK8ADCK/7huxiSE="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "WSuRrYiGwKKMbtdG9z8W9fXmLoCyTnGg9AxbPKLXm2Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 3
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 8,
+          "skipped_file_count": 6
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

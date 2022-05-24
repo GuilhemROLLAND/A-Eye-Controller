@@ -3,14 +3,24 @@ using System.Net;
 
 namespace AEye
 {
+    /// <summary>
+    /// Main class of the program.
+    /// </summary>
     internal static class Program
     {
-        public static Trigger trigger = new Trigger();
-
+        /// <summary>
+        /// Store the IP address.
+        /// </summary>
         public static IPAddress? Ip;
 
+        /// <summary>
+        /// Store the controller.
+        /// </summary>
         public static Controller controller = new Controller();
 
+        /// <summary>
+        /// Store the log.
+        /// </summary>
         public static string log = "";
         /// <summary>
         ///  The main entry point for the application.
@@ -27,6 +37,10 @@ namespace AEye
             Environment.Exit(0);
         }
 
+        /// <summary>
+        /// Thread for backend.
+        /// Must run other thread, such as pipe, TCP-client, ...
+        /// </summary>
         static void RunThread()
         {
             SubProcess subProcess = new SubProcess();

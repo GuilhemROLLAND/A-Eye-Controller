@@ -123,7 +123,6 @@
             this.auto_cb.TabIndex = 1;
             this.auto_cb.Text = "Autoload";
             this.auto_cb.UseVisualStyleBackColor = true;
-            this.auto_cb.CheckedChanged += new System.EventHandler(this.auto_cb_CheckedChanged);
             // 
             // tableLayoutPanel2
             // 
@@ -319,7 +318,7 @@
             this.ip_tb.Name = "ip_tb";
             this.ip_tb.Size = new System.Drawing.Size(176, 31);
             this.ip_tb.TabIndex = 1;
-            this.ip_tb.Text = "192.168.1.21";
+            this.ip_tb.Text = "192.168.1.38";
             // 
             // ip_btn
             // 

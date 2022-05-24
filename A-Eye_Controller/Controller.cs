@@ -8,19 +8,28 @@ namespace AEye
 {
     public partial class Controller : Form
     {
+        /// <summary>
+        /// Used to know which file to show.
+        /// </summary>
+        private bool dispSecond = false;
 
+        /// <summary>
+        /// Initialize the component.
+        /// Give selected index an initial value.
+        /// </summary>
         public Controller()
         {
             InitializeComponent();
-            mode_cb.SelectedIndex = 1;
+            mode_cb.SelectedIndex = 0;
         }
 
-        public int get_mode()
-        {
-            return mode_cb.SelectedIndex;
-        }
-
-        private void SetConfig_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Write the configuration to the config.json.
+        /// Goal is to send it to the board.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void SetConfig_Click(object sender, EventArgs e)
         {
             // Get the current config
             var config = new ConfigFile(
@@ -49,7 +58,13 @@ namespace AEye
 
         }
 
-        private void takePict_btn_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Only in manual mode.
+        /// Ask the board to take a picture and give it back.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void takePict_btn_Click(object sender, EventArgs e)
         {
             // Open the file
             String str;
@@ -97,7 +112,12 @@ namespace AEye
             Program.trigger.EncodeTC = true;
         }
 
-        private void ip_btn_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Set the IP to communicate with the board.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void ip_btn_Click(object sender, EventArgs e)
         {
             try
             {
@@ -126,7 +146,12 @@ namespace AEye
             }
         }
 
-        private void SelectPict_btn_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Open File Dialog to select the picture to display
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void SelectPict_btn_Click(object sender, EventArgs e)
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
@@ -134,20 +159,37 @@ namespace AEye
             }
         }
 
-        private void viewLog_btn_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Display the log string in a messageBox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void viewLog_btn_Click(object sender, EventArgs e)
         {
             MessageBox.Show(Program.log);
         }
 
-        private void auto_cb_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        /// <summary>
+        /// This method is in charge of displaying the incomming picture.
+        /// </summary>
         public void refresh_img()
         {
-            if(auto_cb.Checked)
-                visionneuse.Load("temp.bmp");
+            if (auto_cb.Checked)
+            {
+                if (dispSecond)
+                {
+                    dispSecond = false;
+                    File.Copy("temp.bmp", "disp2.bmp", true);
+                    visionneuse.Load("disp2.bmp");
+                }
+                else
+                {
+                    dispSecond = true;
+                    File.Copy("temp.bmp", "disp1.bmp", true);
+                    visionneuse.Load("disp1.bmp");
+                }
+                
+            }
         }
     }
 }
