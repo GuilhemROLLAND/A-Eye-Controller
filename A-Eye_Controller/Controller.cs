@@ -43,9 +43,6 @@ namespace AEye
             // Write in file
             File.WriteAllText("config.json", jsonString);
 
-            // Set the trigger
-            Program.trigger.EncodeTC = true;
-
             // Activate button
             if (mode_cb.SelectedIndex == 1)
             {
@@ -64,7 +61,7 @@ namespace AEye
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        public void takePict_btn_Click(object sender, EventArgs e)
+        public void TakePict_btn_Click(object sender, EventArgs e)
         {
             // Open the file
             String str;
@@ -107,9 +104,6 @@ namespace AEye
 
             // Save in JSON
             File.WriteAllText("config.json", JsonSerializer.Serialize<ConfigFile>(config));
-
-            // Set the trigger
-            Program.trigger.EncodeTC = true;
         }
 
         /// <summary>
@@ -117,7 +111,7 @@ namespace AEye
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        public void ip_btn_Click(object sender, EventArgs e)
+        public void Ip_btn_Click(object sender, EventArgs e)
         {
             try
             {
@@ -129,7 +123,7 @@ namespace AEye
                 return;
             }
 
-            Ping pingSender = new Ping();
+            var pingSender = new Ping();
             PingReply reply = pingSender.Send(Program.Ip);
             if (reply.Status == IPStatus.Success)
             {
@@ -164,7 +158,7 @@ namespace AEye
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        public void viewLog_btn_Click(object sender, EventArgs e)
+        public void ViewLog_btn_Click(object sender, EventArgs e)
         {
             MessageBox.Show(Program.log);
         }
@@ -172,7 +166,7 @@ namespace AEye
         /// <summary>
         /// This method is in charge of displaying the incomming picture.
         /// </summary>
-        public void refresh_img()
+        public void Refresh_img()
         {
             if (auto_cb.Checked)
             {

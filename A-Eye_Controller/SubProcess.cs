@@ -73,7 +73,7 @@ namespace AEye
                     Program.log += "[INFO][From Python pipe] " + line + "\n";
                     if (line.Contains("Image"))
                     {
-                        Thread disp = new Thread(Program.controller.refresh_img);
+                        Thread disp = new Thread(Program.controller.Refresh_img);
                         disp.Start();
                         if (line.Contains("Manual"))
                         {

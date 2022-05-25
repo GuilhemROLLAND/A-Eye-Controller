@@ -230,7 +230,7 @@
             this.takePict_btn.TabIndex = 5;
             this.takePict_btn.Text = "TakePicture";
             this.takePict_btn.UseVisualStyleBackColor = true;
-            this.takePict_btn.Click += new System.EventHandler(this.takePict_btn_Click);
+            this.takePict_btn.Click += new System.EventHandler(this.TakePict_btn_Click);
             // 
             // viewLog_btn
             // 
@@ -243,7 +243,7 @@
             this.viewLog_btn.TabIndex = 6;
             this.viewLog_btn.Text = "View Log";
             this.viewLog_btn.UseVisualStyleBackColor = true;
-            this.viewLog_btn.Click += new System.EventHandler(this.viewLog_btn_Click);
+            this.viewLog_btn.Click += new System.EventHandler(this.ViewLog_btn_Click);
             // 
             // tableLayoutPanel6
             // 
@@ -329,7 +329,7 @@
             this.ip_btn.TabIndex = 2;
             this.ip_btn.Text = "Set IP";
             this.ip_btn.UseVisualStyleBackColor = true;
-            this.ip_btn.Click += new System.EventHandler(this.ip_btn_Click);
+            this.ip_btn.Click += new System.EventHandler(this.Ip_btn_Click);
             // 
             // openFileDialog1
             // 
