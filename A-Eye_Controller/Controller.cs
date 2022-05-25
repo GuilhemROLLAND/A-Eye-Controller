@@ -127,7 +127,7 @@ namespace AEye
             PingReply reply = pingSender.Send(Program.Ip);
             if (reply.Status == IPStatus.Success)
             {
-                MessageBox.Show("New IP set : " + Program.Ip);
+                //MessageBox.Show("New IP set : " + Program.Ip);
                 Status.Text = "Connected";
                 Status.BackColor = Color.YellowGreen;
             }

@@ -154,32 +154,32 @@ references:
   isSpec: "True"
   fullName: AEye.Controller.Dispose
   nameWithType: Controller.Dispose
-- uid: AEye.Controller.ip_btn_Click(System.Object,EventArgs)
-  name: ip_btn_Click(Object, EventArgs)
-  href: api/AEye.Controller.html#AEye_Controller_ip_btn_Click_System_Object_EventArgs_
-  commentId: M:AEye.Controller.ip_btn_Click(System.Object,EventArgs)
-  fullName: AEye.Controller.ip_btn_Click(System.Object, EventArgs)
-  nameWithType: Controller.ip_btn_Click(Object, EventArgs)
-- uid: AEye.Controller.ip_btn_Click*
-  name: ip_btn_Click
-  href: api/AEye.Controller.html#AEye_Controller_ip_btn_Click_
-  commentId: Overload:AEye.Controller.ip_btn_Click
+- uid: AEye.Controller.Ip_btn_Click(System.Object,EventArgs)
+  name: Ip_btn_Click(Object, EventArgs)
+  href: api/AEye.Controller.html#AEye_Controller_Ip_btn_Click_System_Object_EventArgs_
+  commentId: M:AEye.Controller.Ip_btn_Click(System.Object,EventArgs)
+  fullName: AEye.Controller.Ip_btn_Click(System.Object, EventArgs)
+  nameWithType: Controller.Ip_btn_Click(Object, EventArgs)
+- uid: AEye.Controller.Ip_btn_Click*
+  name: Ip_btn_Click
+  href: api/AEye.Controller.html#AEye_Controller_Ip_btn_Click_
+  commentId: Overload:AEye.Controller.Ip_btn_Click
   isSpec: "True"
-  fullName: AEye.Controller.ip_btn_Click
-  nameWithType: Controller.ip_btn_Click
-- uid: AEye.Controller.refresh_img
-  name: refresh_img()
-  href: api/AEye.Controller.html#AEye_Controller_refresh_img
-  commentId: M:AEye.Controller.refresh_img
-  fullName: AEye.Controller.refresh_img()
-  nameWithType: Controller.refresh_img()
-- uid: AEye.Controller.refresh_img*
-  name: refresh_img
-  href: api/AEye.Controller.html#AEye_Controller_refresh_img_
-  commentId: Overload:AEye.Controller.refresh_img
+  fullName: AEye.Controller.Ip_btn_Click
+  nameWithType: Controller.Ip_btn_Click
+- uid: AEye.Controller.Refresh_img
+  name: Refresh_img()
+  href: api/AEye.Controller.html#AEye_Controller_Refresh_img
+  commentId: M:AEye.Controller.Refresh_img
+  fullName: AEye.Controller.Refresh_img()
+  nameWithType: Controller.Refresh_img()
+- uid: AEye.Controller.Refresh_img*
+  name: Refresh_img
+  href: api/AEye.Controller.html#AEye_Controller_Refresh_img_
+  commentId: Overload:AEye.Controller.Refresh_img
   isSpec: "True"
-  fullName: AEye.Controller.refresh_img
-  nameWithType: Controller.refresh_img
+  fullName: AEye.Controller.Refresh_img
+  nameWithType: Controller.Refresh_img
 - uid: AEye.Controller.SelectPict_btn_Click(System.Object,EventArgs)
   name: SelectPict_btn_Click(Object, EventArgs)
   href: api/AEye.Controller.html#AEye_Controller_SelectPict_btn_Click_System_Object_EventArgs_
@@ -206,32 +206,32 @@ references:
   isSpec: "True"
   fullName: AEye.Controller.SetConfig_Click
   nameWithType: Controller.SetConfig_Click
-- uid: AEye.Controller.takePict_btn_Click(System.Object,EventArgs)
-  name: takePict_btn_Click(Object, EventArgs)
-  href: api/AEye.Controller.html#AEye_Controller_takePict_btn_Click_System_Object_EventArgs_
-  commentId: M:AEye.Controller.takePict_btn_Click(System.Object,EventArgs)
-  fullName: AEye.Controller.takePict_btn_Click(System.Object, EventArgs)
-  nameWithType: Controller.takePict_btn_Click(Object, EventArgs)
-- uid: AEye.Controller.takePict_btn_Click*
-  name: takePict_btn_Click
-  href: api/AEye.Controller.html#AEye_Controller_takePict_btn_Click_
-  commentId: Overload:AEye.Controller.takePict_btn_Click
+- uid: AEye.Controller.TakePict_btn_Click(System.Object,EventArgs)
+  name: TakePict_btn_Click(Object, EventArgs)
+  href: api/AEye.Controller.html#AEye_Controller_TakePict_btn_Click_System_Object_EventArgs_
+  commentId: M:AEye.Controller.TakePict_btn_Click(System.Object,EventArgs)
+  fullName: AEye.Controller.TakePict_btn_Click(System.Object, EventArgs)
+  nameWithType: Controller.TakePict_btn_Click(Object, EventArgs)
+- uid: AEye.Controller.TakePict_btn_Click*
+  name: TakePict_btn_Click
+  href: api/AEye.Controller.html#AEye_Controller_TakePict_btn_Click_
+  commentId: Overload:AEye.Controller.TakePict_btn_Click
   isSpec: "True"
-  fullName: AEye.Controller.takePict_btn_Click
-  nameWithType: Controller.takePict_btn_Click
-- uid: AEye.Controller.viewLog_btn_Click(System.Object,EventArgs)
-  name: viewLog_btn_Click(Object, EventArgs)
-  href: api/AEye.Controller.html#AEye_Controller_viewLog_btn_Click_System_Object_EventArgs_
-  commentId: M:AEye.Controller.viewLog_btn_Click(System.Object,EventArgs)
-  fullName: AEye.Controller.viewLog_btn_Click(System.Object, EventArgs)
-  nameWithType: Controller.viewLog_btn_Click(Object, EventArgs)
-- uid: AEye.Controller.viewLog_btn_Click*
-  name: viewLog_btn_Click
-  href: api/AEye.Controller.html#AEye_Controller_viewLog_btn_Click_
-  commentId: Overload:AEye.Controller.viewLog_btn_Click
+  fullName: AEye.Controller.TakePict_btn_Click
+  nameWithType: Controller.TakePict_btn_Click
+- uid: AEye.Controller.ViewLog_btn_Click(System.Object,EventArgs)
+  name: ViewLog_btn_Click(Object, EventArgs)
+  href: api/AEye.Controller.html#AEye_Controller_ViewLog_btn_Click_System_Object_EventArgs_
+  commentId: M:AEye.Controller.ViewLog_btn_Click(System.Object,EventArgs)
+  fullName: AEye.Controller.ViewLog_btn_Click(System.Object, EventArgs)
+  nameWithType: Controller.ViewLog_btn_Click(Object, EventArgs)
+- uid: AEye.Controller.ViewLog_btn_Click*
+  name: ViewLog_btn_Click
+  href: api/AEye.Controller.html#AEye_Controller_ViewLog_btn_Click_
+  commentId: Overload:AEye.Controller.ViewLog_btn_Click
   isSpec: "True"
-  fullName: AEye.Controller.viewLog_btn_Click
-  nameWithType: Controller.viewLog_btn_Click
+  fullName: AEye.Controller.ViewLog_btn_Click
+  nameWithType: Controller.ViewLog_btn_Click
 - uid: AEye.SubProcess
   name: SubProcess
   href: api/AEye.SubProcess.html
@@ -341,37 +341,6 @@ references:
   isSpec: "True"
   fullName: AEye.TakePicture.Valid
   nameWithType: TakePicture.Valid
-- uid: AEye.Trigger
-  name: Trigger
-  href: api/AEye.Trigger.html
-  commentId: T:AEye.Trigger
-  fullName: AEye.Trigger
-  nameWithType: Trigger
-- uid: AEye.Trigger.#ctor
-  name: Trigger()
-  href: api/AEye.Trigger.html#AEye_Trigger__ctor
-  commentId: M:AEye.Trigger.#ctor
-  fullName: AEye.Trigger.Trigger()
-  nameWithType: Trigger.Trigger()
-- uid: AEye.Trigger.#ctor*
-  name: Trigger
-  href: api/AEye.Trigger.html#AEye_Trigger__ctor_
-  commentId: Overload:AEye.Trigger.#ctor
-  isSpec: "True"
-  fullName: AEye.Trigger.Trigger
-  nameWithType: Trigger.Trigger
-- uid: AEye.Trigger.DecodeTC
-  name: DecodeTC
-  href: api/AEye.Trigger.html#AEye_Trigger_DecodeTC
-  commentId: F:AEye.Trigger.DecodeTC
-  fullName: AEye.Trigger.DecodeTC
-  nameWithType: Trigger.DecodeTC
-- uid: AEye.Trigger.EncodeTC
-  name: EncodeTC
-  href: api/AEye.Trigger.html#AEye_Trigger_EncodeTC
-  commentId: F:AEye.Trigger.EncodeTC
-  fullName: AEye.Trigger.EncodeTC
-  nameWithType: Trigger.EncodeTC
 - uid: AEye.Weights
   name: Weights
   href: api/AEye.Weights.html
