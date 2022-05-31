@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
 
-""" client.py - Echo client for sending/receiving C-like structs via socket
-References:
-- Ctypes: https://docs.python.org/3/library/ctypes.html
-- Sockets: https://docs.python.org/3/library/socket.html
+""" 
+client.py - Main code for sending/receiving TM and TC via TCP socket
 """
 
 import argparse
@@ -22,29 +20,48 @@ import encodageTC
 import decodageTM
 import pipeClient
 
+
 class client:
+    """
+    Static main class. Contains the entry functions.
+    """
+    ## Socket
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
     @staticmethod
     def client_init(ip, port):
+        """
+        Create a tcp socket connecting to zybo addr and port 64000
+        If the tcp server is active on zybo, this function will connect to the tcp server 
+        and send the specified message
+
+        Args:
+            ip : string representing the IP address.
+                ex : 192.168.1.21
+            port : string containing the int of the port.
+                ex : 64000.
+
+        Return:
+            The socket.
+        """
         # Connection parameters
         server_addr = (ip, port)
         try:
             client.s.connect(server_addr)
-            pipeClient.writeInPipe("Connected to {:s}".format(repr(server_addr)))
+            pipeClient.writeInPipe(
+                "Connected to {:s}".format(repr(server_addr)))
         except AttributeError as ae:
             pipeClient.writeInPipe("Error creating the socket: {}".format(ae))
         except socket.error as se:
             pipeClient.writeInPipe("Exception on socket: {}".format(se))
         return client.s
 
-    """
-    Create an instance of a tcp client connecting to zybo addr and port 64000
-    If the tcp server is active on zybo, this function will connect to the tcp server 
-    and send the specified message
-    """
     @staticmethod
     def tcp_client_send():
+        """
+        Polling called.
+        This method get all the TC (using encodage_tc) and send it by the socket.
+        """
         msg = encodageTC.encode_tc()
         if(client.s == NULL):
             pipeClient.writeInPipe("Socket not init.")
@@ -57,14 +74,29 @@ class client:
 
     @staticmethod
     def tcp_client_receive():
+        """
+        Launch in a thread.
+        This method wait for receiving a TM, and then call decodageTM to process it.
+        """
         pipeClient.writeInPipe("In thread tcp_client_receive")
         while(1):
             buff = client.recv_msg(client.s)
             if buff:
                 # pipeClient.writeInPipe("received TM, len = " + len(buff))
                 decodageTM.decodeTM(buff)
-    
+
     def recvall(sock, n):
+        """
+        Keep receiving data while length<n.
+        Must use because TCP work with stream and not data.
+
+        Args:
+            sock : socket.
+            n : size in bytes to receive.
+        
+        Return:
+            The bytes packet containing the n data.
+        """
         # Helper function to recv n bytes or return None if EOF is hit
         data = bytearray()
         while len(data) < n:
@@ -73,8 +105,19 @@ class client:
                 return None
             data.extend(packet)
         return data
-    
+
     def recv_msg(sock):
+        """
+        Get the first 5 bytes.
+        The first one contains the OP code.
+        The next 4 ones contains the size in bytes.
+        
+        Args:
+            sock : the socket.
+            
+        Return:
+            The data packet containing the 5 first bytes and the data content.
+        """
         # Read message length and unpack it into an integer
         raw_msglen = client.recvall(sock, 5)
         if not raw_msglen:
@@ -83,13 +126,22 @@ class client:
         # Read the message data
         return raw_msglen + client.recvall(sock, msglen)
 
-
-
-if __name__ == "__main__":
+def main():
+    """
+    Main function.
+    Use argument as :
+        ip : the string containing the ip.
+        port : the int containing the port.
+    
+    After initializing the connection, the process will run a thread to deal with TM.
+    Then, in a loop of 1 second, it will run a new thread to deal with TC.
+    """
     pipeClient.writeInPipe("In python client main...")
     parser = argparse.ArgumentParser()
-    parser.add_argument("-i", "--ip", type=str,required=True, help="take IpV4 format addr")
-    parser.add_argument("-p", "--port", type=int, required=True, help="port of the server")
+    parser.add_argument("-i", "--ip", type=str,
+                        required=True, help="take IpV4 format addr")
+    parser.add_argument("-p", "--port", type=int,
+                        required=True, help="port of the server")
     args = parser.parse_args()
     client.client_init(args.ip, args.port)
     # Thread receive
@@ -100,4 +152,7 @@ if __name__ == "__main__":
         sender = Thread(target=client.tcp_client_send)
         sender.start()
         sleep(1)
-        
+
+
+if __name__ == "__main__":
+    main()

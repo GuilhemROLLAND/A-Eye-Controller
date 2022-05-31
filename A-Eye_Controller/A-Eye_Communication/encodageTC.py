@@ -1,12 +1,10 @@
-from asyncio.windows_events import NULL
 import json
-import argparse
-import string
 from deepdiff import DeepDiff
-import socket
-import client
 
 def resetTakePicture():
+    """
+    Reset the flag about "TakePicture" in config.json.
+    """
     with open('config.json', 'r', encoding='utf-8') as f:
         json_content = json.load(f)
         f.close()
@@ -14,6 +12,13 @@ def resetTakePicture():
         json.dump(json_content, open('config.json', 'w', encoding='utf-8'), ensure_ascii=False, indent = 4)
 
 def encode_tc() : 
+    """
+    Compare config.json and last_config.json to find differences.
+    Then, convert differences in TC.
+
+    Return:
+        The TC as an array of string.
+    """
     # Loading json config file
     f1 = open('config.json')
     f2 = open('last_config.json')
