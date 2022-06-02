@@ -57,9 +57,11 @@ def encode_tc() :
             mode = diff['values_changed']["root['TakePicture']['Valid']"]['new_value']
             if mode == 'true' :
                 tc.append("21")
-                resetTakePicture()
             else :
                 tc.append("20")
+        new_config['TakePicture']['Valid'] = 'false'
+        resetTakePicture()
+
     # for i in range(len(tc)) :
     #     client.client.tcp_client_send(tc[i])
     with open('./last_config.json', 'w', encoding='utf-8') as f :

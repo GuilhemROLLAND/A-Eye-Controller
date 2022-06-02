@@ -1,6 +1,6 @@
 {
     "Config": {
-        "StartStop": "false",
+        "StartStop": "true",
         "ModeSelector": ""
     },
     "Weights": {

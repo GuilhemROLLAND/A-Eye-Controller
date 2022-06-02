@@ -1,4 +1,7 @@
 ## If set to True, no pipe used --> STDOUT
+from time import sleep
+
+
 DEBUG = False
 
 def writeInPipe(msg):
@@ -11,6 +14,10 @@ def writeInPipe(msg):
     if DEBUG:
         print(msg)
     else:
-        with open(r'\\.\pipe\\'+'CSServer', 'w') as f:
+        try:
+            f = open(r'\\.\pipe\\'+'CSServer', 'w')
             f.write(msg + "\n")
+        except:
+            sleep(1)
+            writeInPipe(msg)
     return

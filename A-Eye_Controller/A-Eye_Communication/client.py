@@ -5,14 +5,9 @@ client.py - Main code for sending/receiving TM and TC via TCP socket
 """
 
 import argparse
-from ast import Try
 from asyncio.windows_events import NULL
-from hashlib import new
-from multiprocessing.connection import Client, wait
 import socket
 import struct
-import sys
-import random
 from ctypes import *
 from threading import Thread
 from time import sleep
@@ -80,7 +75,7 @@ class client:
         """
         pipeClient.writeInPipe("In thread tcp_client_receive")
         while(1):
-            buff = client.recv_msg(client.s)
+            buff = client.recv_TM(client.s)
             if buff:
                 # pipeClient.writeInPipe("received TM, len = " + len(buff))
                 decodageTM.decodeTM(buff)
@@ -100,13 +95,19 @@ class client:
         # Helper function to recv n bytes or return None if EOF is hit
         data = bytearray()
         while len(data) < n:
-            packet = sock.recv(n - len(data))
-            if not packet:
+            packet = None
+            try:
+                packet = sock.recv(n - len(data))
+            except:
+                pipeClient.writeInPipe("Time out")
                 return None
-            data.extend(packet)
+            finally:
+                if not packet:
+                    return None
+                data.extend(packet)
         return data
 
-    def recv_msg(sock):
+    def recv_TM(sock):
         """
         Get the first 5 bytes.
         The first one contains the OP code.
@@ -119,12 +120,20 @@ class client:
             The data packet containing the 5 first bytes and the data content.
         """
         # Read message length and unpack it into an integer
-        raw_msglen = client.recvall(sock, 5)
-        if not raw_msglen:
+        TM_header_size = 5
+        raw_TM_header = client.recvall(sock, TM_header_size)
+        if not raw_TM_header:
             return None
-        msglen = struct.unpack('>I', raw_msglen[1:5])[0]
-        # Read the message data
-        return raw_msglen + client.recvall(sock, msglen)
+        TM_content_size = struct.unpack('>I', raw_TM_header[1:5])[0]
+
+        # Read the message data with timeout
+        sock.settimeout(3.0)
+        raw_TM_content = client.recvall(sock, TM_content_size)
+        sock.settimeout(None)
+        if raw_TM_content == None:
+            return None
+        
+        return raw_TM_header + raw_TM_content
 
 def main():
     """
