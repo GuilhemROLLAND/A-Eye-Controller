@@ -24,3 +24,4 @@ Feature: A-Eye
         Given the selected mode is "mode manual"
         When I click on "take picture"
         Then I must receive a picture
+        And I must receive "Capture"
