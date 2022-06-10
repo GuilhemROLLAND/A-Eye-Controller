@@ -13,6 +13,11 @@ namespace AEye
         /// </summary>
         private bool dispSecond = false;
 
+        public void set_ip_tb(string p0)
+        {
+            ip_tb.Text = p0;
+        }
+
         /// <summary>
         /// Initialize the component.
         /// Give selected index an initial value.

@@ -6,7 +6,7 @@ namespace AEye
     /// <summary>
     /// Main class of the program.
     /// </summary>
-    internal static class Program
+    public static class Program
     {
         /// <summary>
         /// Store the IP address.
@@ -26,7 +26,7 @@ namespace AEye
         ///  The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        public static void Main()
         {
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
